@@ -2,7 +2,7 @@ module.exports = function withShop({ redirect } = { redirect: true }) {
   return function verifyRequest(request, response, next) {
     const { query: { shop }, session } = request;
 
-    if (session && session.accessToken) {
+    if (session && session[`SHOPIFYAUTH:${shop}`]) {
       return next();
     }
 

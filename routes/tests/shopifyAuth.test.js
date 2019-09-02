@@ -6,7 +6,7 @@ const express = require('express');
 const { MemoryStrategy } = require('../../strategies');
 const createShopifyAuthRouter = require('../shopifyAuth');
 
-const PORT = 3000;
+const PORT = 3025;
 const BASE_URL = `http://localhost:${PORT}`
 
 let server;
